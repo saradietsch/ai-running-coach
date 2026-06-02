@@ -38,7 +38,7 @@ A personalized running coach powered by Claude AI and your real training data fr
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/ai-running-coach.git
+git clone git@github.com:saradietsch/ai-running-coach.git
 cd ai-running-coach
 npm install
 ```
