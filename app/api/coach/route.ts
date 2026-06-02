@@ -103,7 +103,6 @@ export async function POST(request: Request) {
           type: 'text',
           text: systemText,
           // cache_control keeps the large training log cached between turns
-          // @ts-expect-error cache_control not yet in SDK typedefs
           cache_control: { type: 'ephemeral' },
         },
       ],
