@@ -38,8 +38,8 @@ export default function PaceChart({ data }: { data: PacePoint[] }) {
           contentStyle={{ backgroundColor: '#fff', border: '1px solid #fed7aa', borderRadius: 8 }}
           labelStyle={{ color: '#78716c' }}
           itemStyle={{ color: '#0284c7' }}
-          formatter={(_: number, __: string, props: { payload: PacePoint }) => [
-            `${props.payload.pace} /mi`, 'Pace',
+          formatter={(value: unknown, name: unknown, item: { payload?: PacePoint }) => [
+            `${item.payload?.pace} /mi`, 'Pace',
           ]}
         />
         <Line
