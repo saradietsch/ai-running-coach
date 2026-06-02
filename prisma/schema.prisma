@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  stravaId      String   @unique
+  accessToken   String
+  refreshToken  String
+  tokenExpiry   Int
+  firstname     String?
+  lastname      String?
+  createdAt     DateTime @default(now())
+  runs          Run[]
+}
+
+model Run {
+  id               Int      @id @default(autoincrement())
+  stravaId         String   @unique
+  name             String
+  distance         Float
+  movingTime       Int
+  elapsedTime      Int
+  averageSpeed     Float
+  maxSpeed         Float
+  averageHeartrate Float?
+  maxHeartrate     Float?
+  totalElevation   Float
+  startDate        DateTime
+  userId           Int
+  user             User     @relation(fields: [userId], references: [id])
+  createdAt        DateTime @default(now())
+}
