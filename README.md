@@ -1,4 +1,5 @@
-# AI Running Coach
+# AI Running Coach -- run right here through Vercel
+## https://ai-running-coach-tau.vercel.app/ 
 
 A personalized running coach powered by Claude AI and your real training data from Strava. Ask questions about your training, get weather-aware advice, and track your progress — all in one place.
 
