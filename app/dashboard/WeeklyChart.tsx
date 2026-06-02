@@ -26,7 +26,7 @@ export default function WeeklyChart({ data }: { data: WeeklyData[] }) {
           contentStyle={{ backgroundColor: '#fff', border: '1px solid #fed7aa', borderRadius: 8 }}
           labelStyle={{ color: '#78716c' }}
           itemStyle={{ color: '#ea580c' }}
-          formatter={(v: number) => [`${v} mi`, 'Distance']}
+          formatter={(v: unknown) => [`${v} mi`, 'Distance']}
         />
         <Bar dataKey="mi" fill="#f97316" radius={[4, 4, 0, 0]} />
       </BarChart>
